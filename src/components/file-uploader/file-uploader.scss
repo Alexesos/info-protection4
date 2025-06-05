@@ -1,0 +1,49 @@
+.file-uploader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid darkslategray;
+  padding: 10px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__input {
+    max-width: fit-content;
+    width: fit-content;
+  }
+
+  &__show {
+    cursor: pointer;
+    text-align: center;
+    font-size: .9rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__editor {
+    position: fixed;
+    padding: 10px;
+    min-width: 200px;
+    max-width: 300px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid darkslategray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+    textarea {
+      resize: none;
+    }
+  }
+}

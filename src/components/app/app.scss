@@ -1,0 +1,107 @@
+.main {
+    display: flex;
+
+    &__container {
+        flex: 1 1 auto;
+        display: grid;
+        column-gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__start,
+    &__mid,
+    &__end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__button {
+        cursor: pointer;
+        padding: 5px 10px;
+        border: 1px solid darkslategray;
+
+        transition: .3s ease;
+
+        &:hover {
+            background: darkslategray;
+            scale: 1.05;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            color: #fff;
+        }
+    }
+}
+
+.models {
+    display: flex;
+    gap: 5px;
+
+    &__item {
+        cursor: pointer;
+        border: 1px solid darkslategray;
+        padding: 5px 10px;
+        transition: .3s ease;
+
+        &:hover {
+            scale: 1.05;
+        }
+
+        &.active {
+            background: darkslategray;
+            color: #fff;
+            pointer-events: none;
+        }
+    }
+}
+
+.button {
+    &__active {
+        &_tasks {
+            cursor: pointer;
+            top: 5px;
+            left: 15px;
+            position: fixed;
+            width: 200px;
+            height: 36px;
+            background: #fff;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            border-radius: 50px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1), 0 -1px 3px rgba(0, 0, 0, 0.08);
+            transition: .3s ease;
+            transform: scaleY(-1);
+
+            &:hover {
+                scale: 1.03;
+            }
+
+            &.active {
+                transform: scaleY(1);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+                span {
+                    transform: scaleY(1);
+                }
+            }
+
+            span {
+                transform: scaleY(-1);
+                transition: .3s ease;
+                font-size: .8rem;
+                max-width: fit-content;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+}

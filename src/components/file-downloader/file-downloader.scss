@@ -1,0 +1,26 @@
+.file-downloader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid darkslategray;
+  padding: 10px;
+
+  &__download {
+    cursor: pointer;
+    border: 1px solid darkslategray;
+    padding: 5px 10px;
+    transition: .3s ease;
+
+    &:hover {
+      scale: 1.05;
+      background: darkslategray;
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    &_disabled {
+      opacity: .5;
+      pointer-events: none;
+    }
+  }
+}
